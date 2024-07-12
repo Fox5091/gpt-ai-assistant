@@ -39,7 +39,7 @@ client.interceptors.response.use(handleFulfilled, (err) => {
 });
 
 const createChatCompletion = ({
-  model = config.OPENAI_COMPLETION_MODEL,
+  model = 'ft:gpt-3.5-turbo-1106:personal::9k3c4FcD',  // 使用你的自訂模型
   messages,
   temperature = config.OPENAI_COMPLETION_TEMPERATURE,
   maxTokens = config.OPENAI_COMPLETION_MAX_TOKENS,
@@ -55,7 +55,7 @@ const createChatCompletion = ({
 });
 
 const createTextCompletion = ({
-  model = config.OPENAI_COMPLETION_MODEL,
+  model = 'ft:gpt-3.5-turbo-1106:personal::9k3c4FcD',  // 使用你的自訂模型
   prompt,
   temperature = config.OPENAI_COMPLETION_TEMPERATURE,
   maxTokens = config.OPENAI_COMPLETION_MAX_TOKENS,
